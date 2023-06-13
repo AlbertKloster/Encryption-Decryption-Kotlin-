@@ -2,5 +2,7 @@ package encryptdecrypt
 
 fun main() {
     val encryptor = Encryptor()
-    println(encryptor.encrypt("we found a treasure!"))
+    val string = readln()
+    val key = readln().toInt()
+    println(encryptor.encrypt(string, key))
 }

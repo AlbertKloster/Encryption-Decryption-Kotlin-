@@ -1,14 +1,29 @@
-# Stage 1/6: Encrypted!
+# Stage 2/6: Knowledge is key
 ## Description
-Today, encryption and decryption algorithms are everywhere to protect our data. They are vital for sites that handle sensitive data, such as e-commerce sites that accept online card payments and login areas that require users to enter their credentials. Complex encryption algorithms are behind the scenes to ensure the security of data.
+In this stage, the encryption will be controlled by a key, a special parameter that controls the behavior of our encryption algorithm. See the picture below for more information.
 
-In this project, you will learn how to encrypt and decrypt messages and texts using simple algorithms. We should note that such algorithms are not suitable for industrial use because they can easily be cracked, but these algorithms illustrate general ideas of encryption.
+Encryption process in the Encryption-Decryption program
+
+![Alt text](./encryption.svg)
+
+<div style="text-align: center; font-size: small">The encryption process</div>
+
+
+The key is assumed to mean that if a person knows the value of the key, they will be able to decrypt the text, and if they do not know it, they will not be able to decrypt the text. It's like a real key that can open up access to the message text.
 
 ## Objectives
-In the first stage, you need to manually encrypt the message `we found a treasure!` and print only the ciphertext (in lower case).
+Write a program that reads an English message and an integer number (key) from the standard input and shifts each letter by the specified number according to its order in the alphabet. If you reach the end of the alphabet, start back at the beginning (a follows z).
 
-To encrypt a message, replace each letter with the letter that is in the corresponding position from the end of the English alphabet (a→z, b→y, c→x, ... x→c, y →b, z→a). Do not replace spaces or exclamation marks.
+The English alphabet is below:
 
-Use the given template to your program to print the ciphertext instead of the original message, no program input is required.
+`abcdefghijklmnopqrstuvwxyz`
 
-The output should look like `## ##### # ########!` where `#` is a lower-case English letter.
+The program should not modify non-letter characters.
+
+## Example
+The greater-than symbol followed by a space (`>` ) represents the user input. Note that it's not part of the input.
+```
+> welcome to hyperskill
+> 5
+bjqhtrj yt mdujwxpnqq
+```
