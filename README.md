@@ -4,9 +4,9 @@ In this stage, the encryption will be controlled by a key, a special parameter t
 
 Encryption process in the Encryption-Decryption program
 
-![Alt text](./encryption.svg)
+![The encryption process](./encryption.svg)
 
-<center>The encryption process</center>
+<p style="text-align:center">The encryption process</p>
 
 
 The key is assumed to mean that if a person knows the value of the key, they will be able to decrypt the text, and if they do not know it, they will not be able to decrypt the text. It's like a real key that can open up access to the message text.
