@@ -6,7 +6,7 @@ Encryption process in the Encryption-Decryption program
 
 ![Alt text](./encryption.svg)
 
-<div style="text-align: center; font-size: small">The encryption process</div>
+<center>The encryption process</center>
 
 
 The key is assumed to mean that if a person knows the value of the key, they will be able to decrypt the text, and if they do not know it, they will not be able to decrypt the text. It's like a real key that can open up access to the message text.
