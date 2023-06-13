@@ -1,29 +1,27 @@
-# Stage 2/6: Knowledge is key
+# Stage 3/6: Decrypted
 ## Description
-In this stage, the encryption will be controlled by a key, a special parameter that controls the behavior of our encryption algorithm. See the picture below for more information.
-
-Encryption process in the Encryption-Decryption program
-
-![The encryption process](./encryption.svg)
-
-<p style="text-align:center">The encryption process</p>
-
-
-The key is assumed to mean that if a person knows the value of the key, they will be able to decrypt the text, and if they do not know it, they will not be able to decrypt the text. It's like a real key that can open up access to the message text.
+In this stage, you need to include decryption into your program. Decryption is simply the inverse of encryption, following the same steps but reversing the order in which the keys are applied.
 
 ## Objectives
-Write a program that reads an English message and an integer number (key) from the standard input and shifts each letter by the specified number according to its order in the alphabet. If you reach the end of the alphabet, start back at the beginning (a follows z).
+Write a program that reads three lines from the standard input: a target operation (`enc` for encryption, `dec` for decryption), a message or a ciphertext, and a key to encrypt/decrypt messages. All non-letter characters should be encrypted as well as regular letters. We recommend you get an integer representation of each character (according to the Unicode table) to shift it.
 
-The English alphabet is below:
+Decompose your program using functions to make it easy to understand and edit later. One method should encrypt a message and another one should decrypt it according to a key.
 
-`abcdefghijklmnopqrstuvwxyz`
+## Examples
+The greater-than symbol followed by a space (`> `) represents the user input. Note that it's not part of the input.
 
-The program should not modify non-letter characters.
-
-## Example
-The greater-than symbol followed by a space (`>` ) represents the user input. Note that it's not part of the input.
+### Example 1: encryption
 ```
-> welcome to hyperskill
+> enc
+> Welcome to hyperskill!
 > 5
-bjqhtrj yt mdujwxpnqq
+\jqhtrj%yt%m~ujwxpnqq&
+```
+
+### Example 2: decryption
+```
+> dec
+> \jqhtrj%yt%m~ujwxpnqq&
+> 5
+Welcome to hyperskill!
 ```
