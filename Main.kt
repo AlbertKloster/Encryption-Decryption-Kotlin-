@@ -8,28 +8,29 @@ fun main(args: Array<String>) {
         val key = getKey(args)
         val data = getData(args)
         val out = getOut(args)
+        val alg = getAlg(args)
         when (mode) {
-            Mode.ENC -> encrypt(key, data, out)
-            Mode.DEC -> decrypt(key, data, out)
+            Mode.ENC -> encrypt(key, data, out, alg)
+            Mode.DEC -> decrypt(key, data, out, alg)
         }
     } catch (e: RuntimeException) {
         println(e.message)
     }
 }
 
-private fun encrypt(key: Int, data: String, out: String) {
+private fun encrypt(key: Int, data: String, out: String, alg: String) {
     if (out.isEmpty()) {
-        println(cryptograph.encrypt(key, data))
+        println(cryptograph.encrypt(key, data, alg))
     } else {
-        fileHandler.write(out, cryptograph.encrypt(key, data))
+        fileHandler.write(out, cryptograph.encrypt(key, data, alg))
     }
 }
 
-private fun decrypt(key: Int, data: String, out: String) {
+private fun decrypt(key: Int, data: String, out: String, alg: String) {
     if (out.isEmpty()) {
-        println(cryptograph.decrypt(key, data))
+        println(cryptograph.decrypt(key, data, alg))
     } else {
-        fileHandler.write(out, cryptograph.decrypt(key, data))
+        fileHandler.write(out, cryptograph.decrypt(key, data, alg))
     }
 }
 
@@ -62,3 +63,9 @@ private fun getOut(args: Array<String>): String {
     val index = args.indexOf("-out")
     return if (index == -1) "" else args[index + 1]
 }
+
+private fun getAlg(args: Array<String>): String {
+    val index = args.indexOf("-alg")
+    return if (index == -1) "shift" else args[index + 1]
+}
+
