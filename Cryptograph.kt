@@ -12,4 +12,5 @@ class Cryptograph {
     fun decrypt(key: Int, encryptedString: String) = encrypt(-1 * key, encryptedString)
 
     private fun shiftCharacterByKey(char: Char, key: Int) = 'a' + (char - 'a' + key)
+
 }
